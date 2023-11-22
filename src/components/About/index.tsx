@@ -1,8 +1,9 @@
-import React from "react";
+import { forwardRef } from "react";
 
-export const About = () => {
+export const About = forwardRef<HTMLElement, unknown>((props, ref) => {
   return (
     <section
+      ref={ref}
       id="about"
       className="relative mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
     >
@@ -30,4 +31,6 @@ export const About = () => {
       </p>
     </section>
   );
-};
+});
+
+About.displayName = "About";

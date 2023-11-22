@@ -2,7 +2,10 @@ import { IconBookmarks, IconBrandGithub } from "@tabler/icons-react";
 import Link from "next/link";
 import React from "react";
 
-export const Header = () => {
+type HeaderProps = {
+  closestSection: string;
+};
+export const Header = ({ closestSection }: HeaderProps) => {
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 ">
       <div>
@@ -26,12 +29,25 @@ export const Header = () => {
                 text: string;
                 link: string;
               },
+              { text: "Projects", link: "#projects" } as {
+                text: string;
+                link: string;
+              },
             ].map((item: { text: string; link: string }, idx) => {
+              const isActive = item.text === closestSection;
               return (
                 <li key={idx}>
                   <a href={item.link} className="group flex items-center py-3">
-                    <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                    <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                    <span
+                      className={`nav-indicator ${
+                        isActive ? "w-16 !bg-slate-200" : ""
+                      } mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none`}
+                    ></span>
+                    <span
+                      className={`nav-text ${
+                        isActive ? "!text-slate-200" : ""
+                      } text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200`}
+                    >
                       {item.text}
                     </span>
                   </a>
@@ -49,13 +65,14 @@ export const Header = () => {
         >
           <IconBrandGithub size={25} />
         </Link>
-        <Link
+        {/* HIDE SUBSTACK */}
+        {/* <Link
           href="https://lucagg.substack.com/"
           className="transition-all hover:scale-150"
           target="_blank"
         >
           <IconBookmarks size={25} className="" />
-        </Link>
+        </Link> */}
       </div>
     </header>
   );

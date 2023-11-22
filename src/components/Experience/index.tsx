@@ -1,8 +1,9 @@
-import React from "react";
+import { forwardRef } from "react";
 
-export const Experience = () => {
+export const Experience = forwardRef<HTMLElement, unknown>((props, ref) => {
   return (
     <section
+      ref={ref}
       id="experience"
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
     >
@@ -89,9 +90,9 @@ export const Experience = () => {
                                 className="ml-1 mt-[-5px] inline-block h-4 w-4 shrink-0 translate-y-px transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
                               >
                                 <path
-                                  fill-rule="evenodd"
+                                  fillRule="evenodd"
                                   d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                                  clip-rule="evenodd"
+                                  clipRule="evenodd"
                                 ></path>
                               </svg>
                             </span>
@@ -122,7 +123,18 @@ export const Experience = () => {
             },
           )}
         </ol>
+        <div className="mt-12">
+          <a
+            href="/Resume.pdf"
+            target="_blank"
+            className="group inline-flex cursor-pointer items-center font-medium leading-tight text-slate-100 hover:underline focus:underline"
+          >
+            View Full Resume
+          </a>
+        </div>
       </div>
     </section>
   );
-};
+});
+
+Experience.displayName = "Experience";
