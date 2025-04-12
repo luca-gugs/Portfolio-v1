@@ -25,7 +25,7 @@ export const About = forwardRef<HTMLElement, unknown>((props, ref) => {
       </p>
       <p>
         When I&apos;m not at the computer, I&apos;m usually training Jiu Jitsu
-        at (ex-Unity HQ now training at Skrap Pack Maring), hanging out with my
+        at (ex-Unity HQ now training at Skrap Pack Marina), hanging out with my
         fiancée (getting married next year!) and our dog Honey, or working my
         way throug David Foster Wallace&apos;s bibliography.
       </p>
