@@ -1,4 +1,9 @@
-import { IconBookmarks, IconBrandGithub } from "@tabler/icons-react";
+import {
+  IconBookmarks,
+  IconBrandGithub,
+  IconBrandTwitter,
+  IconBrandX,
+} from "@tabler/icons-react";
 import Link from "next/link";
 import React from "react";
 
@@ -59,11 +64,18 @@ export const Header = ({ closestSection }: HeaderProps) => {
       </div>
       <div className="mt-8 flex space-x-4 lg:mt-0">
         <Link
-          href="https://github.com/luca-gugs"
+          href="https://github.com/lucarr722"
           className="transition-all hover:scale-150"
           target="_blank"
         >
           <IconBrandGithub size={25} />
+        </Link>
+        <Link
+          href="https://x.com/lucadottsx"
+          className="transition-all hover:scale-150"
+          target="_blank"
+        >
+          <IconBrandX size={25} />
         </Link>
         {/* HIDE SUBSTACK */}
         {/* <Link

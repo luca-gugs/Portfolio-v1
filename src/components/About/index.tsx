@@ -21,13 +21,13 @@ export const About = forwardRef<HTMLElement, unknown>((props, ref) => {
       </p>
       <p className="mb-4">
         My main focus these days is building products for our customers at
-        EasyKnock. In my free time I&apos;ve also worked on several personal
-        projects some of which you can find listed below.
+        RetailReady. Some of my previous projects you will find listed below.
       </p>
       <p>
         When I&apos;m not at the computer, I&apos;m usually training Jiu Jitsu
-        at Unity HQ, hanging out with my girlfriend and our dog Honey, or
-        working my way throug David Foster Wallace&apos;s bibliography.
+        at (ex-Unity HQ now training at Skrap Pack Maring), hanging out with my
+        fiancée (getting married next year!) and our dog Honey, or working my
+        way throug David Foster Wallace&apos;s bibliography.
       </p>
     </section>
   );

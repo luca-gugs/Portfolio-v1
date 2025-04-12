@@ -15,9 +15,25 @@ export const Experience = forwardRef<HTMLElement, unknown>((props, ref) => {
           {[
             {
               description:
+                "As founding engineer, I've architected and built our entire technical infrastructure from the ground up. Developed a comprehensive customer dashboard, designed and implemented our core API, and built out our mobile application used by warehouses nation-wide. My role extended beyond coding to include on-site warehouse operations, direct customer engagement for product feedback, mentoring our growing engineering team, and collaborating with our founders on strategic product decisions. This full-spectrum involvement has allowed me to shape both our technical foundation and business direction while establishing scalable systems and engineering practices.",
+              role: "Founding Engineer",
+              dates: "July `24 - Present",
+              company: "RetailReady (YC W24)",
+              link: "https://www.retailreadyai.com/",
+              techUsed: [
+                "Next.js",
+                "Flask",
+                "ReactNative",
+                "Expo",
+                "DigitalOcean",
+                "AWS",
+              ],
+            },
+            {
+              description:
                 "Developed high-quality, robust production code for a diverse array of projects including serving as the lead engineer on our Customer Portal, building our document upload service, and refactoring our PandaDoc integration.",
               role: "Senior Software Engineer",
-              dates: "Jan `22 - Present",
+              dates: "Jan `22 - July `24",
               company: "EasyKnock",
               link: "https://www.easyknock.com/",
               techUsed: [
