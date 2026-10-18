@@ -5,8 +5,20 @@
 html {
   scroll-behavior: smooth;
 }
+
 @layer base {
   body {
-    @apply bg-slate-900;
+    margin: 0;
+    background: #fff;
+    color: #111;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: #111;
+    text-decoration: none;
+  }
+  ::selection {
+    background: #eee;
   }
 }
