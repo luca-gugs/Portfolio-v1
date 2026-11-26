@@ -20,6 +20,11 @@ const socials = [
 
 const writing = [
   {
+    href: "/writing/how-to-work-with-me",
+    company: "How to work with me",
+    dates: "November 2026",
+  },
+  {
     href: "/writing/how-i-got-here",
     company: "How I got here",
     dates: "November 2026",
